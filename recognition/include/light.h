@@ -5,7 +5,7 @@
 enum Color
 {
     RED,
-    GREEN,
+    WHITE,
     BLUE
 };
 void lightReco(cv::Mat img, Color c);
