@@ -7,7 +7,7 @@ void lightReco(cv::Mat img, Color c)
     cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
     //进行二值化
     cv::Mat bi_image;
-    cv::threshold(gray, bi_image, 127, 255, cv::THRESH_BINARY);
+    cv::threshold(gray, bi_image, 200, 255, cv::THRESH_BINARY);
     //轮廓检测
     std::vector<std::vector<cv::Point>> contours;
     cv::findContours(bi_image, contours, cv::RETR_LIST, cv::CHAIN_APPROX_NONE);
@@ -23,7 +23,7 @@ void lightReco(cv::Mat img, Color c)
         double blue_avg = cv::mean(img(bd_rect))[0];
 
         //test
-        std::cout << red_avg << "\t" << blue_avg << std::endl;
+        //std::cout << red_avg << "\t" << blue_avg << std::endl;
 
         switch (c)
         {
