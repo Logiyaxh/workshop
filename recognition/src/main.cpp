@@ -5,12 +5,12 @@
 
 int main()
 {
-    cv::Mat img = cv::imread("../image/image2.png");
+    cv::Mat img = cv::imread("../image/image3.png");
     if(img.empty())
     {
         std::cerr << "Could not load..." << std::endl;
     }
 
-    lightReco(img, BLUE);    
+    lightReco(img, RED);    
     return 0;
 }

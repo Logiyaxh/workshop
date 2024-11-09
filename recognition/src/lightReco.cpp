@@ -1,6 +1,6 @@
 #include"light.h"
 
-void lightReco(cv::Mat img, Color c)
+void lightReco(cv::Mat img, Color c = RED)
 {
     //转化灰度
     cv::Mat gray;
@@ -23,7 +23,10 @@ void lightReco(cv::Mat img, Color c)
         double blue_avg = cv::mean(img(bd_rect))[0];
 
         //test
-        //std::cout << red_avg << "\t" << blue_avg << std::endl;
+        // cv::imshow("test1", bi_image(bd_rect));
+        // cv::imshow("test2", img(bd_rect));
+        // cv::waitKey(0);
+        // std::cout << red_avg << "\t" << blue_avg << std::endl;
 
         switch (c)
         {
